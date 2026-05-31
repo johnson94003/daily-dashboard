@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#111418">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>每日儀錶板</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 頂部捕捉列：永遠在最上面，隨手記 -->
+    <header class="capture-bar">
+      <input id="captureInput" type="text" inputmode="text"
+             placeholder="想到什麼就丟進來…" autocomplete="off">
+      <button id="captureBtn" aria-label="新增">＋</button>
+    </header>
+
+    <main id="view"></main>
+
+    <nav class="tabbar">
+      <button class="tab active" data-tab="today"><span>今日</span></button>
+      <button class="tab" data-tab="inbox"><span>收件匣<i id="inboxBadge" class="badge"></i></span></button>
+      <button class="tab" data-tab="notes"><span>雜念</span></button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
